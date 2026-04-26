@@ -1,0 +1,63 @@
+const int trigPin = 2;
+const int echoPin = 3;
+
+// LED pins
+const int ledGreen = 4;  // Far
+const int ledYellow = 5; // Middle
+const int ledRed = 6;    // Very Close
+
+void setup() {
+  pinMode(trigPin, OUTPUT);
+  pinMode(echoPin, INPUT);
+
+  pinMode(ledGreen, OUTPUT);
+  pinMode(ledYellow, OUTPUT);
+  pinMode(ledRed, OUTPUT);
+
+  Serial.begin(9600);
+}
+
+void loop() {
+  // 1. Measure Distance
+  digitalWrite(trigPin, LOW);
+  delayMicroseconds(2);
+  digitalWrite(trigPin, HIGH);
+  delayMicroseconds(10);
+  digitalWrite(trigPin, LOW);
+
+  long duration = pulseIn(echoPin, HIGH);
+  int distance = duration * 0.034 / 2;
+
+  // 2. Control LEDs based on thresholds (in cm)
+  if (distance < 10) {
+    // Very Close: All LEDs ON
+    digitalWrite(ledGreen, HIGH);
+    digitalWrite(ledYellow, HIGH);
+    digitalWrite(ledRed, HIGH);
+  } 
+  else if (distance < 25) {
+    // Middle distance: Green and Yellow ON
+    digitalWrite(ledGreen, HIGH);
+    digitalWrite(ledYellow, HIGH);
+    digitalWrite(ledRed, LOW);
+  } 
+  else if (distance < 50) {
+    // Far distance: Only Green ON
+    digitalWrite(ledGreen, HIGH);
+    digitalWrite(ledYellow, LOW);
+    digitalWrite(ledRed, LOW);
+  } 
+  else {
+    // Out of range: All LEDs OFF
+    digitalWrite(ledGreen, LOW);
+    digitalWrite(ledYellow, LOW);
+    digitalWrite(ledRed, LOW);
+  }
+
+  // Debugging output
+  Serial.print("Distance: ");
+  Serial.print(distance);
+  Serial.println(" cm");
+
+  delay(100); 
+}
