@@ -64,5 +64,5 @@ app.post("/api/speak", async (req, res) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`Cheshire app running at http://localhost:${PORT}/auth.html`);
+  console.log(`Cheshire app running at http://localhost:${PORT}/welcome.html`);
 });

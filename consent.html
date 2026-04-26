@@ -14,18 +14,30 @@
           We'll record a 30-second sample. You can revoke this consent at any time.
         </p>
 
-        <button class="record-btn" onclick="showWaveform()">●</button>
+        <div class="record-wrap">
+          <div class="record-ring"></div>
+          <div class="record-ring"></div>
+          <div class="record-ring"></div>
+          <button id="recordBtn" class="record-btn-new" onclick="startRecording()">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+              <path d="M9 18V5l12-2v13"/>
+              <circle cx="6" cy="18" r="3"/>
+              <circle cx="18" cy="16" r="3"/>
+            </svg>
+          </button>
+        </div>
+        <div class="record-timer" id="recordTimer">Tap to record</div>
 
         <div id="waveform" class="mini-wave hidden"></div>
 
         <label class="check-row">
-          <input type="checkbox" id="consentCheck" onchange="toggleConsent()">
+          <input type="checkbox" id="consentCheck" onchange="toggleConsent()" disabled>
           I consent to my voice being used by Cheshire for my own communication only.
         </label>
 
         <a id="continueConsent" class="main-btn disabled" href="#">Continue</a>
 
-        <p class="powered">Powered by ElevenLabs</p>
+        <p class="powered">Powered by <strong>ElevenLabs</strong></p>
       </div>
     </div>
   </main>

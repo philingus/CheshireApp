@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Creating Voice Profile</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="space-bg" onload="startCloning()">
+  <main class="phone">
+    <div class="screen progress-screen">
+      <div class="progress-orb">
+        <svg viewBox="0 0 60 60" fill="none" stroke="#c084fc" stroke-width="2" stroke-linecap="round">
+          <path d="M30 12 v36"/>
+          <path d="M22 18 v24"/>
+          <path d="M38 18 v24"/>
+          <path d="M14 24 v12"/>
+          <path d="M46 24 v12"/>
+        </svg>
+      </div>
+      <h1 class="progress-title">Creating your voice profile</h1>
+      <p class="progress-sub">Cheshire is learning what makes your voice yours.</p>
+
+      <div class="progress-bar-wrap">
+        <div class="progress-bar"><span id="progressFill"></span></div>
+        <div class="progress-percent"><span id="progressPct">0%</span></div>
+      </div>
+
+      <p class="progress-status" id="progressStatus">Initializing...</p>
+      <p class="powered" style="position:absolute; bottom:30px; left:0; right:0;">Powered by <strong>ElevenLabs</strong></p>
+    </div>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
