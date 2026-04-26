@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Voice Consent</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="space-bg">
+  <main class="phone">
+    <div class="screen center-screen">
+      <div class="glass-card">
+        <h1 class="serif italic">Your voice belongs to you.</h1>
+        <p>
+          To speak in your voice, Cheshire needs your permission.
+          We'll record a 30-second sample. You can revoke this consent at any time.
+        </p>
+
+        <button class="record-btn" onclick="showWaveform()">●</button>
+
+        <div id="waveform" class="mini-wave hidden"></div>
+
+        <label class="check-row">
+          <input type="checkbox" id="consentCheck" onchange="toggleConsent()">
+          I consent to my voice being used by Cheshire for my own communication only.
+        </label>
+
+        <a id="continueConsent" class="main-btn disabled" href="#">Continue</a>
+
+        <p class="powered">Powered by ElevenLabs</p>
+      </div>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

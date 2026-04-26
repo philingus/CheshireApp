@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Voice Profile</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body onload="loadVoiceSettings()">
+
+  <main class="phone">
+    <div class="notch"></div>
+
+    <section class="screen">
+      <div class="status-bar">
+        <span>9:41</span>
+        <span>📶 🔋</span>
+      </div>
+
+      <div class="page">
+        <p class="eyebrow">Voice Profile</p>
+        <h1>Customize Voice</h1>
+        <p class="subtitle">
+          Choose how Cheshire should speak triggered phrases.
+        </p>
+
+        <div class="card">
+          <h2>Demo Voice</h2>
+          <p>This prototype uses your browser’s built-in voices.</p>
+
+          <select id="voiceSelect" class="voice-select"></select>
+
+          <button class="main-button" onclick="testSelectedVoice()">Test Voice</button>
+        </div>
+
+        <div class="card">
+          <h2>Future Voice Cloning</h2>
+          <p>In the full version, the patient could upload old recordings or videos.</p>
+          <p>Those samples would create a custom voice profile using a voice cloning API.</p>
+        </div>
+
+        <div class="card">
+          <h2>Sample Upload UI</h2>
+          <input class="voice-input" type="file" accept="audio/*,video/*" />
+          <p>This is just a mock upload for now. Tiny tragedy: it does not clone voices yet.</p>
+        </div>
+      </div>
+
+      <nav class="bottom-nav">
+        <a href="index.html">🏠<br>Home</a>
+        <a href="log.html">📋<br>Log</a>
+        <a href="voice.html">🎙️<br>Voice</a>
+      </nav>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
