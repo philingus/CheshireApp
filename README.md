@@ -82,15 +82,6 @@ In this prototype, a user performs a tiny gesture. The app detects the motion, d
 * Requires medical validation for clinical use.
 * Production-ready voice cloning consent systems are currently conceptual.
 
----
-
-## 🗺 Future Roadmap
-
-- [ ] Real-time Phyphox streaming integration.
-- [ ] Support for **EMG muscle sensors** and **Eye-tracking**.
-- [ ] Caregiver dashboard for phrase customization.
-- [ ] Mobile app version (iOS/Android).
-- [ ] Secure patient voice consent system.
 
 ---
 
