@@ -60,7 +60,9 @@ Cheshire fits multiple hackathon categories:
 * **Dream in AI:** Imagining a future where speech is accessible to everyone.
 * **Healthcare / Accessibility:** Focuses on assistive tech for motor impairments.
 * **Hardware:** Integrates Arduino R4 and ultrasonic sensors for physical feedback.
-* **Social Impact:** Designed around dignity and reconnecting loved ones.
+* **ElevenLabs**
+* **SnowflakeAPI**
+* **auth0**
 
 ---
 
